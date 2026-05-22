@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 </script>
 
-<div class="min-h-screen relative flex flex-col items-center justify-center font-bodoni">
+<div class="min-h-screen relative flex flex-col items-center justify-center font-contax">
 	<div class="grain-overlay"></div>
 	
 	<div class="absolute inset-0 overflow-hidden">

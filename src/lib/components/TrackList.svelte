@@ -3,7 +3,7 @@
 	import { player } from '$lib/stores/playerStore';
 </script>
 
-<div class="glass rounded-tl-2xl rounded-bl-2xl p-4 md:p-6 max-h-96 overflow-y-auto">
+<div class="glass rounded-tl-2xl rounded-bl-2xl md:rounded-2xl p-4 md:p-6 max-h-96 md:max-h-none overflow-y-auto md:overflow-visible">
 	<h3 class="text-sm uppercase tracking-widest text-soft-white/50 mb-4 font-medium">Tracklist</h3>
 	<div class="space-y-2">
 		{#each tracks as track, index}

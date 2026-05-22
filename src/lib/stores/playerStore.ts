@@ -8,6 +8,7 @@ interface PlayerState {
   volume: number;
   progress: number;
   duration: number;
+  showLyrics: boolean;
 }
 
 const createPlayerStore = () => {
@@ -16,7 +17,8 @@ const createPlayerStore = () => {
     isPlaying: false,
     volume: 0.7,
     progress: 0,
-    duration: 0
+    duration: 0,
+    showLyrics: false
   });
 
   let howl: Howl | null = null;
@@ -126,6 +128,10 @@ const createPlayerStore = () => {
     play();
   };
 
+  const toggleLyrics = () => {
+    update(state => ({ ...state, showLyrics: !state.showLyrics }));
+  };
+
   return {
     subscribe,
     play,
@@ -135,7 +141,8 @@ const createPlayerStore = () => {
     previous,
     setVolume,
     seek,
-    selectTrack
+    selectTrack,
+    toggleLyrics
   };
 };
 

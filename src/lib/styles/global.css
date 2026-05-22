@@ -25,8 +25,15 @@ html, body {
   font-family: 'Marlboro', 'cursive', 'system-ui', sans-serif;
 }
 
-.font-bodoni {
-  font-family: 'Bodoni Moda', 'Georgia', 'Times New Roman', serif;
+@font-face {
+  font-family: 'Contax Sans';
+  src: url('/fonts/contax-sans/Contax Sans 65 Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-contax {
+  font-family: 'Contax Sans', 'system-ui', sans-serif;
   letter-spacing: 0.02em;
 }
 

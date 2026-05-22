@@ -10,7 +10,7 @@
 	});
 </script>
 
-<div class="min-h-screen relative flex flex-col font-bodoni">
+<div class="min-h-screen relative flex flex-col font-contax">
 	<div class="absolute inset-0 overflow-hidden">
 		<video 
 			src="/visuals/cowboy-riding.mp4" 
