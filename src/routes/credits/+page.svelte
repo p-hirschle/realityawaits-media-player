@@ -27,10 +27,10 @@
 		
 		<div class="space-y-8 text-left glass rounded-2xl p-8 md:p-10">
 			<div>
-				<h2 class="text-sm uppercase tracking-widest text-soft-white/50 mb-3 font-medium">Developed by</h2>
+				<h2 class="text-sm uppercase tracking-widest text-soft-white/50 mb-2 font-medium">Developed by</h2>
 				<p class="text-xl text-soft-white mb-2">Pedro Hirschle</p>
 				<a 
-					href="https://linkedin.com/in/pedrohirschle" 
+					href="https://www.linkedin.com/in/pedro-hirschle" 
 					target="_blank" 
 					rel="noopener noreferrer"
 					class="inline-flex items-center gap-2 text-medium-sand hover:text-soft-white transition-colors"
