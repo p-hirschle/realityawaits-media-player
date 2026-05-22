@@ -12,7 +12,7 @@
 			/>
 		</div>
 	{:else}
-		<div class="absolute inset-0 bg-gradient-to-br from-dark-red via-deep-black to-wine"></div>
+		<div class="absolute inset-0 bg-gradient-to-br from-sand via-deep-black to-dark-sand"></div>
 	{/if}
 	
 	<div class="absolute inset-0 bg-deep-black/70"></div>

@@ -9,17 +9,17 @@
 		{#each tracks as track, index}
 			<button 
 				on:click={() => player.selectTrack(index)}
-				class="w-full flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-all duration-300 group {$player.currentTrack?.id === track.id ? 'bg-wine/10' : ''}"
+				class="w-full flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-all duration-300 group {$player.currentTrack?.id === track.id ? 'bg-dark-sand/10' : ''}"
 			>
 				<div class="w-8 text-center text-soft-white/40 font-mono text-sm group-hover:text-soft-white/70 transition-colors">
 					{#if $player.currentTrack?.id === track.id && $player.isPlaying}
-						<span class="text-wine">▶</span>
+						<span class="text-dark-sand">▶</span>
 					{:else}
 						{index + 1}
 					{/if}
 				</div>
 				<div class="flex-1 text-left">
-					<p class="text-soft-white group-hover:text-white transition-colors {$player.currentTrack?.id === track.id ? 'text-wine' : ''}">
+					<p class="text-soft-white group-hover:text-white transition-colors {$player.currentTrack?.id === track.id ? 'text-dark-sand' : ''}">
 						{track.title}
 					</p>
 					<p class="text-xs text-soft-white/40 group-hover:text-soft-white/60 transition-colors">

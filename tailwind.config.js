@@ -5,8 +5,9 @@ export default {
     extend: {
       colors: {
         'deep-black': '#0a0a0a',
-        'wine': '#746751ff',
-        'dark-red': '#8B7355',
+        'dark-sand': '#746751ff',
+        'sand': '#8B7355',
+        'medium-sand': '#B3A38B',
         'dark-gray': '#1a1a1a',
         'soft-white': '#e0e0e0'
       },

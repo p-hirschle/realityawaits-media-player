@@ -127,7 +127,7 @@
 			
 			<button 
 				on:click={player.togglePlay}
-				class="w-16 h-16 flex items-center justify-center bg-wine hover:bg-wine/90 text-soft-white rounded-full transition-all hover:scale-105 shadow-lg shadow-wine/30 mx-6"
+				class="w-16 h-16 flex items-center justify-center bg-dark-sand hover:bg-dark-sand/90 text-soft-white rounded-full transition-all hover:scale-105 shadow-lg shadow-dark-sand/30 mx-6"
 			>
 				{#if $player.isPlaying}
 					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

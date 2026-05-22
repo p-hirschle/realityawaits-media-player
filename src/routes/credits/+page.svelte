@@ -6,7 +6,7 @@
 	<div class="grain-overlay"></div>
 	
 	<div class="absolute inset-0 overflow-hidden">
-		<div class="absolute inset-0 bg-gradient-to-br from-deep-black via-dark-gray to-dark-red/40"></div>
+		<div class="absolute inset-0 bg-gradient-to-br from-deep-black via-dark-gray to-sand/40"></div>
 	</div>
 
 	<div class="relative z-10 text-center scale-in max-w-2xl px-6">
@@ -33,7 +33,7 @@
 					href="https://linkedin.com/in/pedrohirschle" 
 					target="_blank" 
 					rel="noopener noreferrer"
-					class="inline-flex items-center gap-2 text-wine hover:text-soft-white transition-colors"
+					class="inline-flex items-center gap-2 text-medium-sand hover:text-soft-white transition-colors"
 				>
 					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
@@ -45,18 +45,13 @@
 			</div>
 
 			<div>
-				<h2 class="text-sm uppercase tracking-widest text-soft-white/50 mb-3 font-medium">Techs n' Stacks</h2>
+				<h2 class="text-sm uppercase tracking-widest text-white/50 mb-3 font-medium">Techs n' Stacks</h2>
 				<div class="flex flex-wrap gap-2">
 					<span class="px-4 py-2 bg-dark-gray rounded-full text-sm text-soft-white/70">SvelteKit</span>
 					<span class="px-4 py-2 bg-dark-gray rounded-full text-sm text-soft-white/70">TypeScript</span>
 					<span class="px-4 py-2 bg-dark-gray rounded-full text-sm text-soft-white/70">TailwindCSS</span>
 					<span class="px-4 py-2 bg-dark-gray rounded-full text-sm text-soft-white/70">Howler.js</span>
 				</div>
-			</div>
-
-			<div>
-				<h2 class="text-sm uppercase tracking-widest text-soft-white/50 mb-3 font-medium"></h2>
-				<p class="text-soft-white/80">Album "The New Abnormal" by The Strokes</p>
 			</div>
 		</div>
 	</div>
