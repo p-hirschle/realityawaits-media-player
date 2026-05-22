@@ -60,18 +60,18 @@
 	<div class="relative z-10 text-center fade-in">
 		{#if !isCounting && !showCredits}
 			<div class="flex flex-col items-center gap-6">
-				<div class="w-2 h-2 bg-soft-white rounded-full animate-pulse"></div>
+				<div class="w-2 h-2 bg-soft-white animate-pulse"></div>
 				<div class="flex flex-col gap-4">
 					<button 
 						on:mouseenter={playSteady}
 						on:click={startCountdown}
-						class="px-20 py-5 bg-white/5 border-2 border-soft-white/30 hover:border-soft-white/70 text-soft-white/70 hover:text-soft-white transition-all hover:scale-105 tracking-[0.15em] uppercase text-4xl"
+						class="px-20 py-5 bg-white/15 border-1 border-soft-white/30 hover:border-soft-white/70 text-soft-white/90 hover:text-soft-white transition-all hover:scale-105 tracking-[0.15em] uppercase text-4xl"
 					>
 						Hit The Road
 					</button>
 					<button 
 						on:click={() => showCredits = true}
-						class="px-20 py-5 bg-white/5 border-2 border-soft-white/30 hover:border-soft-white/70 text-soft-white/70 hover:text-soft-white transition-all hover:scale-105 tracking-[0.15em] uppercase text-4xl"
+						class="px-20 py-5 bg-white/15 border-1 border-soft-white/30 hover:border-soft-white/70 text-soft-white/90 hover:text-soft-white transition-all hover:scale-105 tracking-[0.15em] uppercase text-4xl"
 					>
 						Credits
 					</button>
@@ -86,7 +86,7 @@
 							href="https://www.linkedin.com/in/pedro-hirschle" 
 							target="_blank" 
 							rel="noopener noreferrer"
-							class="px-2 py-1 text-4xl bg-dark-gray text-soft-white/70 hover:text-wine transition-colors"
+							class="px-2 py-1 text-4xl bg-dark-gray text-soft-white/80 hover:text-wine transition-colors"
 						>
 							Pedro Hirschle
 						</a>
@@ -95,10 +95,10 @@
 					<div>
 						<h2 class="text-lg uppercase tracking-widest text-soft-white/100 mb-2 font-medium">Techs n' Stacks</h2>
 						<div class="flex flex-wrap gap-0">
-							<span class="px-2 py-1 bg-dark-gray text-md text-soft-white/70">SvelteKit</span>
-							<span class="px-2 py-1 bg-dark-gray text-md text-soft-white/70">TypeScript</span>
-							<span class="px-2 py-1 bg-dark-gray text-md text-soft-white/70">TailwindCSS</span>
-							<span class="px-2 py-1 bg-dark-gray text-md text-soft-white/70">Howler.js</span>
+							<span class="px-2 py-1 bg-dark-gray text-lg text-soft-white/80">SvelteKit</span>
+							<span class="px-2 py-1 bg-dark-gray text-lg text-soft-white/80">TypeScript</span>
+							<span class="px-2 py-1 bg-dark-gray text-lg text-soft-white/80">TailwindCSS</span>
+							<span class="px-2 py-1 bg-dark-gray text-lg text-soft-white/80">Howler.js</span>
 						</div>
 					</div>
 				</div>
@@ -115,8 +115,8 @@
 			</div>
 		{:else}
 			<div class="flex flex-col items-center gap-4">
-				<div class="w-2 h-2 bg-soft-white rounded-full animate-pulse"></div>
-				<p class="text-6xl text-soft-white/70 tracking-[0.15em] uppercase">
+				<div class="w-2 h-2 bg-soft-white animate-pulse"></div>
+				<p class="text-6xl text-soft-white/90 tracking-[0.15em] uppercase">
 					Listening experience in {countdown}s
 				</p>
 			</div>
