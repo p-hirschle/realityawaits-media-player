@@ -1,6 +1,11 @@
 <script lang="ts">
 	import { player } from '$lib/stores/playerStore';
 	import { tracks } from '$lib/data/tracks';
+	import { onMount, tick } from 'svelte';
+
+	let titleContainer: HTMLDivElement;
+	let titleText: HTMLSpanElement;
+	let isOverflowing = false;
 
 	const formatTime = (seconds: number): string => {
 		const mins = Math.floor(seconds / 60);
@@ -17,6 +22,23 @@
 		const target = e.currentTarget as HTMLInputElement;
 		player.setVolume(Number(target.value));
 	};
+
+	const checkOverflow = async () => {
+		await tick();
+		if (titleContainer && titleText) {
+			isOverflowing = titleText.scrollWidth > titleContainer.clientWidth;
+		}
+	};
+
+	$: if ($player.currentTrack) {
+		checkOverflow();
+	}
+
+	onMount(() => {
+		checkOverflow();
+		window.addEventListener('resize', checkOverflow);
+		return () => window.removeEventListener('resize', checkOverflow);
+	});
 </script>
 
 <div class="glass rounded-2xl p-6 md:p-8 red-glow">
@@ -30,10 +52,25 @@
 					style="filter: sepia(0.6) hue-rotate(-10deg);"
 				/>
 			</div>
-			<div class="flex-1 min-w-0">
-				<h2 class="text-xl md:text-2xl font-medium text-soft-white truncate">
+			<div class="flex-1 min-w-0 overflow-hidden" bind:this={titleContainer}>
+				<span class="absolute opacity-0 text-xl md:text-2xl font-medium whitespace-nowrap pointer-events-none" bind:this={titleText}>
 					{$player.currentTrack.title}
-				</h2>
+				</span>
+				{#if isOverflowing}
+					<div class="animate-marquee whitespace-nowrap inline-block">
+						<h2 class="text-xl md:text-2xl font-medium text-soft-white inline-block">
+							{$player.currentTrack.title}
+						</h2>
+						<span class="inline-block w-8"></span>
+						<h2 class="text-xl md:text-2xl font-medium text-soft-white inline-block">
+							{$player.currentTrack.title}
+						</h2>
+					</div>
+				{:else}
+					<h2 class="text-xl md:text-2xl font-medium text-soft-white truncate">
+						{$player.currentTrack.title}
+					</h2>
+				{/if}
 				<p class="text-soft-white/60 text-lg">{$player.currentTrack.artist}</p>
 			</div>
 		</div>
