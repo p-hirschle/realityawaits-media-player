@@ -65,13 +65,13 @@
 					<button 
 						on:mouseenter={playSteady}
 						on:click={startCountdown}
-						class="px-20 py-5 bg-white/15 border-1 border-soft-white/30 hover:border-soft-white/70 text-soft-white/90 hover:text-soft-white transition-all hover:scale-105 tracking-[0.15em] uppercase text-4xl"
+						class="px-20 py-5 bg-sand/45 border-1 border-soft-white/30 hover:border-soft-white/70 text-soft-white/90 hover:text-soft-white transition-all hover:scale-105 tracking-[0.15em] uppercase text-4xl"
 					>
 						Hit The Road
 					</button>
 					<button 
 						on:click={() => showCredits = true}
-						class="px-20 py-5 bg-white/15 border-1 border-soft-white/30 hover:border-soft-white/70 text-soft-white/90 hover:text-soft-white transition-all hover:scale-105 tracking-[0.15em] uppercase text-4xl"
+						class="px-20 py-5 bg-sand/45 border-1 border-soft-white/30 hover:border-soft-white/70 text-soft-white/90 hover:text-soft-white transition-all hover:scale-105 tracking-[0.15em] uppercase text-4xl"
 					>
 						Credits
 					</button>

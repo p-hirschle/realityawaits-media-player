@@ -128,6 +128,20 @@ const createPlayerStore = () => {
     play();
   };
 
+  const stop = () => {
+    if (howl) {
+      howl.unload();
+      howl = null;
+    }
+    update(state => ({
+      ...state,
+      currentTrack: null,
+      isPlaying: false,
+      progress: 0,
+      duration: 0
+    }));
+  };
+
   const toggleLyrics = () => {
     update(state => ({ ...state, showLyrics: !state.showLyrics }));
   };
@@ -142,7 +156,8 @@ const createPlayerStore = () => {
     setVolume,
     seek,
     selectTrack,
-    toggleLyrics
+    toggleLyrics,
+    stop
   };
 };
 

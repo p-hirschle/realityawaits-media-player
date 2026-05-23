@@ -130,7 +130,68 @@ export const tracks: Track[] = [
     artist: "The Strokes",
     src: "/music/shopping.mp3",
     cover: "/visuals/cover-icon.jpg",
-    visual: "/visuals/cowboy-bg.jpg"
+    visual: "/visuals/cowboy-bg.jpg",
+    lyrics:
+    `
+    Like a tiger, they will chase you down
+    With words instead of claws
+    They will seduce you 'til you reach the point
+    To let yourself get mauled, oh
+    The worse reality gets, 
+    the less you wanna hear about it
+    Solidarity can be difficult
+    When you got cool stuff to lose
+
+    I wanna be a 7-foot zombie
+    The pay is low, but I gotta do somethin'
+    I'm at the mall and the song is bumpin'
+    There goes my future wife
+    in the little red jumpsuit
+
+    I'm goin' away to the country
+    Don't wander off too far
+    I'm goin' out my mind
+    Throwin' all my plans out the window
+    Don't wanna waste my life
+    I'll see you on the other side
+
+    I've been thinkin' about what I wanna say
+    But I'm an old man now
+    At least that's what they tell me anyway
+    We've been expanding on our greatness
+    Building future ruins
+    We're buildin' castles from 
+    the bones of dead trees
+    Molded from the shattered ashes of
+    the Dead Sea
+
+    I moved away to the country
+    I had to change my way
+    But I kinda miss you now
+    Stockbrokers flyin' out the window
+    I kinda miss that sound
+    Don't wanna wake up Pa (Haha)
+
+    (Doo-doo-doo-doo)
+    (Doo-doo-doo-doo)
+    (Doo-doo, doo-doo-doo-doo)
+    (Doo-doo-doo-doo, doo-doo-doo)
+
+    I can't wait, I'm goin' shoppin'
+    I'm at the mall and the song is bumpin'
+    I wanna be a 7-foot starfish
+    Above the law, a political puppet
+
+    I'm goin' back to the city
+    I'm 'bout to lose my mind
+    I'm gonna stay alive
+    I'm climbin' out through the window
+    I miss the shops and malls
+    I'm gonna meet you there
+    Still throwin' my phone out the window
+    I'm gonna soothe my soul
+    Can't wait, I'm goin' shoppin'
+    `,
   },
   {
     id: 7,

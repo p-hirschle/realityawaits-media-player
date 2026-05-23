@@ -2,11 +2,22 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { player } from '$lib/stores/playerStore';
+	import { tracks } from '$lib/data/tracks';
 	import PlayerControls from '$lib/components/PlayerControls.svelte';
 	import TrackList from '$lib/components/TrackList.svelte';
 
+	const goBack = () => {
+		player.stop();
+		goto('/');
+	};
+
 	onMount(() => {
-		player.selectTrack(0);
+		const firstAvailableIndex = tracks.findIndex(track => track.src.length > 0);
+		if (firstAvailableIndex !== -1) {
+			player.selectTrack(firstAvailableIndex);
+		} else {
+			player.selectTrack(0);
+		}
 	});
 </script>
 
@@ -36,7 +47,7 @@
 	
 	<header class="relative z-20 p-6 md:p-8">
 		<button 
-			on:click={() => goto('/')}
+			on:click={goBack}
 			class="flex items-center gap-2 text-soft-white/60 hover:text-soft-white transition-all hover:scale-105"
 		>
 			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
