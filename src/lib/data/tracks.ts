@@ -37,7 +37,7 @@ export const tracks: Track[] = [
     id: 4,
     title: "Falling out of Love",
     artist: "The Strokes",
-    src: "/music/out-of-love.mp3",
+    src: "/music/reality-awaits/out-of-love.mp3",
     cover: "/visuals/cover-icon.jpg",
     visual: "/visuals/cowboy-bg.jpg",
     lyrics:
@@ -128,7 +128,7 @@ export const tracks: Track[] = [
     id: 6,
     title: "Going Shopping",
     artist: "The Strokes",
-    src: "/music/shopping.mp3",
+    src: "/music/reality-awaits/shopping.mp3",
     cover: "/visuals/cover-icon.jpg",
     visual: "/visuals/cowboy-bg.jpg",
     lyrics:

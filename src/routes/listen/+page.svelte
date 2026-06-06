@@ -8,7 +8,7 @@
 
 	const goBack = () => {
 		player.stop();
-		goto('/');
+		goto('/reality-awaits');
 	};
 
 	onMount(() => {
