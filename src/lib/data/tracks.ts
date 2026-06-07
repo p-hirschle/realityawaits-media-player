@@ -256,7 +256,7 @@ export const theNewAbnormalTracks: Track[] = [
     id: 105,
     title: "Eternal Summer",
     artist: "The Strokes",
-    src: "",
+    src: "/music/the-new-abnormal/summer.mp3",
     cover: "/visuals/abnormal-cover.jpg",
     visual: "/visuals/abnormal-bg.jpg"
   },
@@ -264,7 +264,7 @@ export const theNewAbnormalTracks: Track[] = [
     id: 106,
     title: "At The Door",
     artist: "The Strokes",
-    src: "",
+    src: "/music/the-new-abnormal/at-the-door.mp3",
     cover: "/visuals/abnormal-cover.jpg",
     visual: "/visuals/abnormal-bg.jpg"
   },
@@ -272,7 +272,7 @@ export const theNewAbnormalTracks: Track[] = [
     id: 107,
     title: "Why Are Sundays So Depressing",
     artist: "The Strokes",
-    src: "",
+    src: "/music/the-new-abnormal/why-are-sundays.mp3",
     cover: "/visuals/abnormal-cover.jpg",
     visual: "/visuals/abnormal-bg.jpg"
   },
@@ -280,7 +280,7 @@ export const theNewAbnormalTracks: Track[] = [
     id: 108,
     title: "Not The Same Anymore",
     artist: "The Strokes",
-    src: "",
+    src: "/music/the-new-abnormal/not-the-same.mp3",
     cover: "/visuals/abnormal-cover.jpg",
     visual: "/visuals/abnormal-bg.jpg"
   },
@@ -288,7 +288,7 @@ export const theNewAbnormalTracks: Track[] = [
     id: 109,
     title: "Ode To The Mets",
     artist: "The Strokes",
-    src: "",
+    src: "/music/the-new-abnormal/mets.mp3",
     cover: "/visuals/abnormal-cover.jpg",
     visual: "/visuals/abnormal-bg.jpg"
   }

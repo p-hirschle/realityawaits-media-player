@@ -70,30 +70,30 @@
 			<div class="flex flex-col items-center gap-6">
 				<div class="flex flex-col gap-8 text-left p-8 md:p-10 max-w-2xl">
 					<div>
-						<h2 class="text-lg uppercase tracking-widest text-abnormal-orange-muted mb-2 font-medium">Developed by</h2>
+						<h2 class="credits-graffiti-tag text-lg uppercase tracking-widest text-abnormal-orange-muted mb-2 font-medium">Developed by</h2>
 						<a
 							href="https://www.linkedin.com/in/pedro-hirschle"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="px-2 py-1 text-4xl bg-soft-white text-abnormal-orange hover:text-abnormal-orange/80 transition-colors"
+							class="credits-graffiti-name text-4xl text-abnormal-orange hover:text-abnormal-orange/80 transition-colors"
 						>
 							Pedro Hirschle
 						</a>
 					</div>
 
 					<div>
-						<h2 class="text-lg uppercase tracking-widest text-abnormal-orange-muted mb-2 font-medium">Techs n' Stacks</h2>
+						<h2 class="credits-graffiti-tag text-lg uppercase tracking-widest text-abnormal-orange-muted mb-2 font-medium">Techs n' Stacks</h2>
 						<div class="flex flex-wrap gap-0">
-							<span class="px-2 py-1 bg-soft-white text-lg text-abnormal-orange">SvelteKit</span>
-							<span class="px-2 py-1 bg-soft-white text-lg text-abnormal-orange">TypeScript</span>
-							<span class="px-2 py-1 bg-soft-white text-lg text-abnormal-orange">TailwindCSS</span>
-							<span class="px-2 py-1 bg-soft-white text-lg text-abnormal-orange">Howler.js</span>
+							<span class="credits-graffiti-chip text-lg text-abnormal-orange">SvelteKit</span>
+							<span class="credits-graffiti-chip text-lg text-abnormal-orange">TypeScript</span>
+							<span class="credits-graffiti-chip text-lg text-abnormal-orange">TailwindCSS</span>
+							<span class="credits-graffiti-chip text-lg text-abnormal-orange">Howler.js</span>
 						</div>
 					</div>
 				</div>
 				<button
 					on:click={() => showCredits = false}
-					class="flex items-center gap-2 text-abnormal-orange-muted hover:text-abnormal-orange transition-all hover:scale-105 text-3xl"
+					class="credits-graffiti-back flex items-center gap-2 text-abnormal-orange-muted hover:text-abnormal-orange transition-all hover:scale-105 text-3xl"
 				>
 					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 						<line x1="19" y1="12" x2="5" y2="12"></line>
@@ -152,6 +152,81 @@
 				linear-gradient(180deg, rgba(55, 117, 161, 0.04), rgba(10, 10, 10, 0.12) 52%, rgba(10, 10, 10, 0.48));
 			mix-blend-mode: screen;
 			opacity: 0.34;
+		}
+
+		.credits-graffiti-tag,
+		.credits-graffiti-name,
+		.credits-graffiti-chip {
+			display: inline-block;
+			position: relative;
+			padding: 0.16rem 0.54rem;
+			background:
+				radial-gradient(circle at 12% 32%, rgba(10, 10, 10, 0.18) 0 2px, transparent 4px),
+				radial-gradient(circle at 82% 68%, rgba(255, 122, 0, 0.24) 0 4px, transparent 7px),
+				linear-gradient(112deg, transparent 0 24%, rgba(10, 10, 10, 0.12) 25% 27%, transparent 28% 100%),
+				#fff7eb;
+			clip-path: polygon(2% 12%, 98% 0, 96% 88%, 5% 100%, 0 48%);
+			box-shadow:
+				5px 6px 0 rgba(10, 10, 10, 0.66),
+				0 0 24px rgba(255, 122, 0, 0.26);
+			text-shadow: none;
+		}
+
+		.credits-graffiti-tag {
+			transform: rotate(-0.8deg);
+		}
+
+		.credits-graffiti-name {
+			padding: 0.18rem 0.62rem;
+			clip-path: polygon(1% 8%, 99% 5%, 95% 93%, 7% 100%, 0 36%);
+			background:
+				radial-gradient(circle at 18% 76%, rgba(255, 122, 0, 0.22) 0 5px, transparent 8px),
+				radial-gradient(circle at 69% 27%, rgba(10, 10, 10, 0.16) 0 4px, transparent 7px),
+				linear-gradient(18deg, transparent 0 56%, rgba(255, 122, 0, 0.18) 57% 61%, transparent 62% 100%),
+				#fffaf1;
+			transform: rotate(0.55deg);
+		}
+
+		.credits-graffiti-chip {
+			margin: 0.08rem;
+			clip-path: polygon(5% 4%, 100% 10%, 94% 96%, 0 90%, 2% 34%);
+			background:
+				radial-gradient(circle at 78% 22%, rgba(10, 10, 10, 0.2) 0 2px, transparent 5px),
+				linear-gradient(154deg, transparent 0 38%, rgba(255, 122, 0, 0.2) 39% 44%, transparent 45% 100%),
+				#fff8ec;
+			box-shadow:
+				4px 5px 0 rgba(10, 10, 10, 0.58),
+				0 0 18px rgba(255, 122, 0, 0.18);
+		}
+
+		.credits-graffiti-chip:nth-child(2) {
+			clip-path: polygon(0 12%, 96% 2%, 100% 82%, 6% 96%, 3% 56%);
+			transform: rotate(-0.5deg);
+		}
+
+		.credits-graffiti-chip:nth-child(3) {
+			clip-path: polygon(3% 0, 98% 14%, 93% 92%, 1% 100%, 6% 44%);
+			transform: rotate(0.6deg);
+		}
+
+		.credits-graffiti-chip:nth-child(4) {
+			clip-path: polygon(6% 10%, 100% 0, 96% 100%, 0 86%, 3% 42%);
+			transform: rotate(-0.25deg);
+		}
+
+		.credits-graffiti-back {
+			position: relative;
+			padding: 0.18rem 0.72rem;
+			background:
+				radial-gradient(circle at 18% 30%, rgba(10, 10, 10, 0.2) 0 3px, transparent 6px),
+				radial-gradient(circle at 84% 72%, rgba(255, 122, 0, 0.22) 0 5px, transparent 8px),
+				linear-gradient(21deg, transparent 0 43%, rgba(10, 10, 10, 0.13) 44% 47%, transparent 48% 100%),
+				#fff8ec;
+			clip-path: polygon(4% 6%, 100% 14%, 95% 91%, 0 100%, 2% 46%);
+			box-shadow:
+				5px 6px 0 rgba(10, 10, 10, 0.62),
+				0 0 18px rgba(255, 122, 0, 0.2);
+			transform: rotate(-0.4deg);
 		}
 
 		.abnormal-button {
