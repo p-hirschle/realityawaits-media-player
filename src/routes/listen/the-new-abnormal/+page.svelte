@@ -27,13 +27,13 @@
 		<div class="abnormal-bg-x" aria-hidden="true">
 			<div class="abnormal-bg-y">
 				<img
-					src="/visuals/abnormal-bg.jpg"
+					src="/visuals/basquiat-bg.jpg"
 					alt=""
 					class="abnormal-bg-image"
 				/>
 			</div>
 		</div>
-		<div class="absolute inset-0 bg-deep-black/58"></div>
+		<div class="absolute inset-0 bg-deep-black/42"></div>
 		<div class="absolute inset-0 abnormal-player-wash"></div>
 	</div>
 
@@ -52,7 +52,7 @@
 		</button>
 	</header>
 
-	<main class="relative z-20 flex-1 flex flex-col md:flex-row items-center justify-center gap-8 p-6 md:p-12">
+	<main class="player-stage relative z-20 flex-1 flex flex-col md:flex-row items-center justify-center gap-8 p-6 md:p-12">
 		<div class="w-full md:w-1/2 max-w-md">
 			<PlayerControls variant="abnormal" />
 		</div>
@@ -83,10 +83,10 @@
 
 		@keyframes abnormal-zoom {
 			0% {
-				transform: scale(1.08);
+				transform: scale(1.01);
 			}
 			100% {
-				transform: scale(1.16);
+				transform: scale(1.04);
 			}
 		}
 
@@ -111,7 +111,7 @@
 		.abnormal-bg-image {
 			object-fit: cover;
 			object-position: center center;
-			animation: abnormal-zoom 22s ease-in-out infinite alternate;
+			animation: abnormal-zoom 32s ease-in-out infinite alternate;
 			filter: sepia(0.24) saturate(1.34) hue-rotate(-12deg) contrast(1.08);
 			transform-origin: center center;
 		}
@@ -120,8 +120,18 @@
 			background:
 				radial-gradient(circle at 45% 36%, rgba(255, 125, 43, 0.24), transparent 34%),
 				radial-gradient(circle at 82% 74%, rgba(225, 65, 26, 0.16), transparent 28%),
-				linear-gradient(180deg, rgba(10, 10, 10, 0.1), rgba(77, 23, 12, 0.42) 52%, rgba(10, 10, 10, 0.86));
+				linear-gradient(180deg, rgba(10, 10, 10, 0.06), rgba(77, 23, 12, 0.26) 52%, rgba(10, 10, 10, 0.62));
 			mix-blend-mode: screen;
+		}
+
+		.player-stage {
+			transform: translateY(-1rem);
+		}
+
+		@media (min-width: 768px) {
+			.player-stage {
+				transform: translateY(-2rem);
+			}
 		}
 	</style>
 </div>

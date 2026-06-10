@@ -50,17 +50,112 @@
 
 <style>
 	.text-abnormal-accent {
-		color: #3775A1;
+		color: #ef6515;
 	}
 
 	.abnormal-active {
-		background: rgba(55, 117, 161, 0.12);
+		background: rgba(239, 101, 21, 0.16);
+		box-shadow:
+			inset 4px 0 0 #ef6515,
+			0 0 0 1px rgba(20, 53, 77, 0.08);
 	}
 
-	.abnormal-track-list {
+	.abnormal-track-list.glass.dust-card {
+		position: relative;
+		isolation: isolate;
+		overflow: visible;
+		border: 0;
+		border-radius: 4px;
+		background: transparent;
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+		color: #14354d;
+		box-shadow:
+			9px 11px 0 rgba(13, 28, 36, 0.38),
+			0 16px 28px rgba(10, 10, 10, 0.2);
+		transform: rotate(0.16deg);
+	}
+
+	.abnormal-track-list.dust-card::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		border: 1px solid rgba(20, 53, 77, 0.18);
+		border-radius: 3px 5px 2px 4px;
 		background:
-			linear-gradient(145deg, rgba(31, 71, 104, 0.58), rgba(13, 13, 13, 0.78) 58%, rgba(55, 117, 161, 0.34)),
-			rgba(18, 18, 18, 0.76);
-		border-color: rgba(55, 117, 161, 0.28);
+			radial-gradient(circle at 10% 18%, rgba(239, 101, 21, 0.16) 0 2px, transparent 4px),
+			radial-gradient(circle at 88% 28%, rgba(20, 53, 77, 0.12) 0 3px, transparent 6px),
+			radial-gradient(circle at 72% 86%, rgba(239, 101, 21, 0.12) 0 5px, transparent 9px),
+			linear-gradient(0deg, rgba(20, 53, 77, 0.07) 0 1px, transparent 1px 100%),
+			linear-gradient(90deg, rgba(239, 101, 21, 0.06) 0 1px, transparent 1px 100%),
+			#f5eddb;
+		background-size:
+			auto,
+			auto,
+			auto,
+			100% 13px,
+			19px 100%,
+			auto;
+		box-shadow:
+			inset 0 0 0 3px rgba(255, 255, 255, 0.2),
+			inset 0 -24px 32px rgba(189, 109, 34, 0.07);
+		animation: none;
+		filter: none;
+		opacity: 1;
+		transform: none;
+		pointer-events: none;
+	}
+
+	.abnormal-track-list.dust-card::after {
+		content: '';
+		position: absolute;
+		left: 1rem;
+		right: 1rem;
+		bottom: 0.55rem;
+		z-index: 0;
+		height: 1.25rem;
+		background:
+			linear-gradient(94deg, transparent 0 10%, rgba(20, 53, 77, 0.12) 11% 14%, transparent 15% 30%, rgba(239, 101, 21, 0.15) 31% 34%, transparent 35% 60%, rgba(20, 53, 77, 0.1) 61% 64%, transparent 65% 100%),
+			linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(180, 93, 31, 0.13));
+		clip-path: polygon(0 48%, 8% 20%, 16% 64%, 27% 26%, 39% 70%, 51% 17%, 65% 61%, 78% 24%, 90% 68%, 100% 35%, 100% 100%, 0 100%);
+		opacity: 0.82;
+		pointer-events: none;
+	}
+
+	.abnormal-track-list .dust-card-content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.abnormal-track-list :where(h3, p, span, div, button) {
+		color: #14354d;
+	}
+
+	.abnormal-track-list .text-abnormal-accent {
+		color: #ef6515;
+	}
+
+	.abnormal-track-list h3 {
+		display: inline-block;
+		color: #ef6515;
+		background: transparent;
+		box-shadow: none;
+		padding: 0;
+		transform: none;
+	}
+
+	.abnormal-track-list button {
+		border-radius: 3px;
+	}
+
+	.abnormal-track-list button:hover {
+		background: rgba(20, 53, 77, 0.08);
+	}
+
+	.abnormal-track-list img {
+		border: 0;
+		border-radius: 3px;
+		box-shadow: 3px 4px 0 rgba(20, 53, 77, 0.24);
 	}
 </style>

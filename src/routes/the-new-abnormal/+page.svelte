@@ -105,7 +105,7 @@
 		{:else}
 			<div class="flex flex-col items-center gap-4">
 				<div class="abnormal-pulse-triangle animate-pulse"></div>
-				<p class="text-6xl text-abnormal-orange tracking-[0.08em] uppercase">
+				<p class="abnormal-countdown-text text-6xl text-soft-white tracking-[0.08em] uppercase">
 					Listening experience in {countdown}s
 				</p>
 			</div>
@@ -143,6 +143,22 @@
 			border-right: 0.42rem solid transparent;
 			border-bottom: 0.76rem solid #ff7a00;
 			filter: drop-shadow(0 0 10px rgba(255, 122, 0, 0.56));
+		}
+
+		.abnormal-countdown-text {
+			display: inline-block;
+			padding: 0.14rem 0.56rem 0.18rem;
+			background:
+				radial-gradient(circle at 11% 36%, rgba(10, 10, 10, 0.22) 0 2px, transparent 4px),
+				radial-gradient(circle at 88% 64%, rgba(255, 255, 255, 0.16) 0 4px, transparent 7px),
+				linear-gradient(102deg, transparent 0 28%, rgba(10, 10, 10, 0.14) 29% 31%, transparent 32% 100%),
+				#ff7a00;
+			clip-path: polygon(1% 14%, 99% 4%, 97% 86%, 4% 98%, 0 44%);
+			box-shadow:
+				4px 5px 0 rgba(10, 10, 10, 0.58),
+				0 0 24px rgba(255, 122, 0, 0.26);
+			text-shadow: 2px 2px 0 rgba(10, 10, 10, 0.48);
+			transform: rotate(-0.35deg);
 		}
 
 		.blue-wash {

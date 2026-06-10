@@ -108,7 +108,7 @@
 				value={$player.progress}
 				on:input={handleSeek}
 				class="w-full h-2 rounded-full appearance-none cursor-pointer transition-all"
-				style={variant === 'abnormal' ? 'background: rgba(55, 117, 161, 0.18); accent-color: #3775A1;' : 'background: rgba(170, 146, 94, 0.11); accent-color: #e0e0e0;'}
+				style={variant === 'abnormal' ? 'background: rgba(255, 122, 0, 0.2); accent-color: #ff7a00;' : 'background: rgba(170, 146, 94, 0.11); accent-color: #e0e0e0;'}
 			/>
 			<div class="flex justify-between text-sm text-soft-white/70 mt-2 font-mono">
 				<span>{formatTime($player.progress)}</span>
@@ -195,7 +195,7 @@
 				value={$player.volume}
 				on:input={handleVolume}
 				class="flex-1 h-2 rounded-full appearance-none cursor-pointer transition-all"
-				style={variant === 'abnormal' ? 'background: rgba(55, 117, 161, 0.18); accent-color: #3775A1;' : 'background: rgba(170, 146, 94, 0.11); accent-color: #e0e0e0;'}
+				style={variant === 'abnormal' ? 'background: rgba(255, 122, 0, 0.2); accent-color: #ff7a00;' : 'background: rgba(170, 146, 94, 0.11); accent-color: #e0e0e0;'}
 			/>
 		</div>
 	{/if}
@@ -212,20 +212,85 @@
 		background: rgba(116, 103, 81, 0.9);
 	}
 
-	.abnormal-player {
+	.abnormal-player.glass.dust-card {
+		position: relative;
+		isolation: isolate;
+		overflow: visible;
+		border: 0;
+		border-radius: 4px;
+		background: transparent;
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+		color: #14354d;
+		box-shadow: none;
+		transform: rotate(-0.18deg);
+	}
+
+	.abnormal-player.dust-card::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		border: 1px solid rgba(20, 53, 77, 0.18);
+		border-radius: 4px 2px 5px 3px;
 		background:
-			linear-gradient(145deg, rgba(31, 71, 104, 0.62), rgba(13, 13, 13, 0.8) 56%, rgba(55, 117, 161, 0.34)),
-			rgba(18, 18, 18, 0.76);
-		border-color: rgba(55, 117, 161, 0.28);
-		box-shadow: 0 0 46px rgba(55, 117, 161, 0.22);
+			radial-gradient(circle at 12% 20%, rgba(255, 111, 18, 0.18) 0 2px, transparent 4px),
+			radial-gradient(circle at 78% 18%, rgba(20, 53, 77, 0.12) 0 3px, transparent 6px),
+			radial-gradient(circle at 89% 72%, rgba(255, 111, 18, 0.13) 0 5px, transparent 9px),
+			linear-gradient(2deg, rgba(20, 53, 77, 0.08) 0 1px, transparent 1px 100%),
+			linear-gradient(91deg, rgba(255, 111, 18, 0.08) 0 1px, transparent 1px 100%),
+			#f2ead8;
+		background-size:
+			auto,
+			auto,
+			auto,
+			100% 14px,
+			18px 100%,
+			auto;
+		box-shadow:
+			inset 0 0 0 3px rgba(255, 255, 255, 0.18),
+			inset 0 -20px 32px rgba(189, 109, 34, 0.08);
+		animation: none;
+		filter: none;
+		opacity: 1;
+		transform: none;
+		pointer-events: none;
+	}
+
+	.abnormal-player .dust-card-content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.abnormal-player :where(h2, h3, p, span, button, svg) {
+		color: #14354d;
+		stroke: currentColor;
+	}
+
+	.abnormal-player :where(button:hover, button:focus-visible) {
+		color: #ef6515;
+	}
+
+	.abnormal-player img {
+		border: 0;
+		border-radius: 3px;
+		box-shadow: 5px 6px 0 rgba(20, 53, 77, 0.28);
 	}
 
 	.abnormal-play {
-		background: #3775A1;
-		box-shadow: 0 12px 28px rgba(55, 117, 161, 0.36);
+		border-radius: 5px;
+		width: 3.55rem;
+		height: 3.55rem;
+		background: #ef6515;
+		box-shadow:
+			4px 5px 0 rgba(20, 53, 77, 0.42),
+			0 0 0 2px rgba(255, 248, 236, 0.76);
+		color: #fff8ec;
+		clip-path: polygon(4% 10%, 96% 2%, 100% 82%, 12% 100%, 0 42%);
 	}
 
 	.abnormal-play:hover {
-		background: #4689b9;
+		background: #ff7a00;
+		color: #fff8ec;
 	}
 </style>

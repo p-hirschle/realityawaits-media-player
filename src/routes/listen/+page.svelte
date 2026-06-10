@@ -52,7 +52,7 @@
 		</button>
 	</header>
 	
-	<main class="relative z-20 flex-1 flex flex-col md:flex-row items-center justify-center gap-8 p-6 md:p-12">
+	<main class="player-stage relative z-20 flex-1 flex flex-col md:flex-row items-center justify-center gap-8 p-6 md:p-12">
 		<div class="w-full md:w-1/2 max-w-md">
 			<PlayerControls />
 		</div>
@@ -114,6 +114,16 @@
 			animation: cinematic-zoom 24s ease-in-out infinite alternate;
 			filter: sepia(0.18) saturate(0.9) contrast(1.05);
 			transform-origin: center 20%;
+		}
+
+		.player-stage {
+			transform: translateY(-1rem);
+		}
+
+		@media (min-width: 768px) {
+			.player-stage {
+				transform: translateY(-2rem);
+			}
 		}
 	</style>
 </div>
