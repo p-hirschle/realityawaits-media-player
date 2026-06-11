@@ -32,7 +32,9 @@
 		}
 	];
 
-	let activeAlbum = albums[1];
+	const defaultBg = '/visuals/default-bg.jpg';
+
+	let activeAlbum: Album | null = null;
 
 	const selectAlbum = (album: Album) => {
 		if (album.href) {
@@ -57,6 +59,7 @@
 		const target = event.currentTarget as HTMLElement;
 		target.style.setProperty('--album-rotate-x', '0deg');
 		target.style.setProperty('--album-rotate-y', '0deg');
+		activeAlbum = null;
 	};
 </script>
 
@@ -66,16 +69,22 @@
 
 <div class="album-select min-h-screen relative overflow-hidden font-nimbus-sans">
 	<div class="absolute inset-0">
+		<img
+			src={defaultBg}
+			alt=""
+			class:active-bg={activeAlbum === null}
+			class="album-bg default-album-bg absolute inset-0 h-full w-full object-cover"
+		/>
 		{#each albums as album}
 			<img
 				src={album.bg}
 				alt=""
-				class:active-bg={activeAlbum.title === album.title}
+				class:active-bg={activeAlbum?.title === album.title}
 				class="album-bg absolute inset-0 h-full w-full object-cover"
 			/>
 		{/each}
 		<div class="absolute inset-0 bg-deep-black/65"></div>
-		<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1),transparent_42%),linear-gradient(180deg,rgba(10,10,10,0.18),#0a0a0a_92%)]"></div>
+		<div class="album-bg-vignette absolute inset-0"></div>
 	</div>
 
 	<div class="grain-overlay"></div>
@@ -83,7 +92,7 @@
 	<main class="relative z-10 flex min-h-screen flex-col items-center justify-center gap-8 px-5 py-8 md:px-10">
 		<div class="text-center">
 			<p class="mb-3 text-xs uppercase tracking-[0.34em] text-soft-white/45">The Strokes Player</p>
-			<h1 class="text-4xl uppercase text-soft-white md:text-6xl">SELECT YOUR RECORD</h1>
+			<h1 class="text-4xl uppercase text-soft-white md:text-6xl">CHOOSE YOUR RECORD</h1>
 		</div>
 
 		<div class="album-grid grid w-full max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 md:gap-12">
@@ -116,6 +125,16 @@
 	</main>
 
 	<style>
+		@keyframes default-bg-drift {
+			0%,
+			100% {
+				transform: scale(1.02) translate3d(-0.7%, -0.35%, 0);
+			}
+			50% {
+				transform: scale(1.055) translate3d(0.8%, 0.45%, 0);
+			}
+		}
+
 		.album-bg {
 			opacity: 0;
 			transform: scale(1.08);
@@ -123,9 +142,20 @@
 			filter: saturate(0.84) contrast(1.08);
 		}
 
+		.default-album-bg {
+			animation: default-bg-drift 31s ease-in-out infinite;
+			transform-origin: center center;
+		}
+
 		.album-bg.active-bg {
 			opacity: 1;
 			transform: scale(1.02);
+		}
+
+		.album-bg-vignette {
+			background:
+				radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 42%),
+				linear-gradient(180deg, rgba(10, 10, 10, 0.12), rgba(10, 10, 10, 0.68) 96%);
 		}
 
 		.album-grid {

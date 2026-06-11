@@ -55,6 +55,8 @@
 
 	.abnormal-active {
 		background: rgba(239, 101, 21, 0.16);
+		border-radius: 0;
+		clip-path: polygon(1% 7%, 99% 2%, 97.8% 93%, 4% 100%, 0 54%);
 		box-shadow:
 			inset 4px 0 0 #ef6515,
 			0 0 0 1px rgba(20, 53, 77, 0.08);
@@ -70,9 +72,7 @@
 		backdrop-filter: none;
 		-webkit-backdrop-filter: none;
 		color: #14354d;
-		box-shadow:
-			9px 11px 0 rgba(13, 28, 36, 0.38),
-			0 16px 28px rgba(10, 10, 10, 0.2);
+		box-shadow: none;
 		transform: rotate(0.16deg);
 	}
 
@@ -83,17 +83,12 @@
 		z-index: 0;
 		border: 1px solid rgba(20, 53, 77, 0.18);
 		border-radius: 3px 5px 2px 4px;
+		clip-path: polygon(0.8% 4%, 2.5% 1%, 82% 2%, 88% 0, 91% 7%, 96% 4%, 100% 11%, 100% 44%, 98.5% 78%, 96.5% 85%, 98% 96%, 92% 99%, 4% 100%, 0 86%, 1% 18%);
 		background:
-			radial-gradient(circle at 10% 18%, rgba(239, 101, 21, 0.16) 0 2px, transparent 4px),
-			radial-gradient(circle at 88% 28%, rgba(20, 53, 77, 0.12) 0 3px, transparent 6px),
-			radial-gradient(circle at 72% 86%, rgba(239, 101, 21, 0.12) 0 5px, transparent 9px),
 			linear-gradient(0deg, rgba(20, 53, 77, 0.07) 0 1px, transparent 1px 100%),
 			linear-gradient(90deg, rgba(239, 101, 21, 0.06) 0 1px, transparent 1px 100%),
 			#f5eddb;
 		background-size:
-			auto,
-			auto,
-			auto,
 			100% 13px,
 			19px 100%,
 			auto;
@@ -147,6 +142,10 @@
 
 	.abnormal-track-list button {
 		border-radius: 3px;
+	}
+
+	.abnormal-track-list .abnormal-active {
+		border-radius: 0;
 	}
 
 	.abnormal-track-list button:hover {

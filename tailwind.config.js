@@ -9,7 +9,8 @@ export default {
         'sand': '#8B7355',
         'medium-sand': '#B3A38B',
         'dark-gray': '#1a1a1a',
-        'soft-white': '#e0e0e0'
+        'soft-white': '#e0e0e0',
+        'red': '#c71111'
       },
       fontFamily: {
         sans: ['Marlboro', 'cursive', 'system-ui', 'sans-serif']

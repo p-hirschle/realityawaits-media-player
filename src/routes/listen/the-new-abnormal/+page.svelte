@@ -42,9 +42,9 @@
 	<header class="relative z-20 p-6 md:p-8">
 		<button
 			on:click={goBack}
-			class="flex items-center gap-2 text-soft-white/70 hover:text-soft-white transition-all hover:scale-105"
+			class="flex items-center gap-2 text-red/70 hover:text-red transition-all hover:scale-105"
 		>
-			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+			<svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 				<line x1="19" y1="12" x2="5" y2="12"></line>
 				<polyline points="12 19 5 12 12 5"></polyline>
 			</svg>

@@ -44,7 +44,7 @@
 
 <div class="glass dust-card player-shell rounded-2xl p-6 md:p-8 red-glow" class:abnormal-player={variant === 'abnormal'}>
 	<div class="dust-card-content">
-	{#if $player.showLyrics}
+	{#if $player.showLyrics && variant !== 'abnormal'}
 		<div class="h-full">
 			<div class="flex items-center justify-between mb-6">
 				<button 
@@ -156,16 +156,18 @@
 						<line x1="19" y1="5" x2="19" y2="19"></line>
 					</svg>
 				</button>
-				<button 
-					on:click={player.toggleLyrics}
-					class="w-12 h-12 flex items-center justify-center text-soft-white/70 hover:text-soft-white transition-all hover:scale-110"
-				>
-					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M9 18V5l12-2v13"></path>
-						<circle cx="6" cy="18" r="3"></circle>
-						<circle cx="18" cy="16" r="3"></circle>
-					</svg>
-				</button>
+				{#if variant !== 'abnormal'}
+					<button 
+						on:click={player.toggleLyrics}
+						class="w-12 h-12 flex items-center justify-center text-soft-white/70 hover:text-soft-white transition-all hover:scale-110"
+					>
+						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M9 18V5l12-2v13"></path>
+							<circle cx="6" cy="18" r="3"></circle>
+							<circle cx="18" cy="16" r="3"></circle>
+						</svg>
+					</button>
+				{/if}
 			</div>
 		</div>
 
@@ -233,17 +235,12 @@
 		z-index: 0;
 		border: 1px solid rgba(20, 53, 77, 0.18);
 		border-radius: 4px 2px 5px 3px;
+		clip-path: polygon(1.4% 3%, 90% 1.2%, 94% 0, 96.5% 4.5%, 99% 2%, 100% 42%, 99% 78%, 96.8% 86%, 98.2% 97%, 91% 99%, 5% 100%, 0 72%, 0.8% 18%);
 		background:
-			radial-gradient(circle at 12% 20%, rgba(255, 111, 18, 0.18) 0 2px, transparent 4px),
-			radial-gradient(circle at 78% 18%, rgba(20, 53, 77, 0.12) 0 3px, transparent 6px),
-			radial-gradient(circle at 89% 72%, rgba(255, 111, 18, 0.13) 0 5px, transparent 9px),
-			linear-gradient(2deg, rgba(20, 53, 77, 0.08) 0 1px, transparent 1px 100%),
-			linear-gradient(91deg, rgba(255, 111, 18, 0.08) 0 1px, transparent 1px 100%),
-			#f2ead8;
+			linear-gradient(0deg, rgba(20, 53, 77, 0.1) 0 1px, transparent 1px 100%),
+			linear-gradient(90deg, rgba(239, 101, 21, 0.08) 0 1px, transparent 1px 100%),
+			#f5eddb;
 		background-size:
-			auto,
-			auto,
-			auto,
 			100% 14px,
 			18px 100%,
 			auto;
@@ -292,5 +289,32 @@
 	.abnormal-play:hover {
 		background: #ff7a00;
 		color: #fff8ec;
+	}
+
+	.abnormal-player input[type='range'] {
+		--abnormal-thumb: #ef6515;
+		--abnormal-thumb-shadow: rgba(20, 53, 77, 0.32);
+	}
+
+	.abnormal-player input[type='range']::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 18px;
+		height: 18px;
+		border: 0;
+		border-radius: 0;
+		background: var(--abnormal-thumb);
+		box-shadow: 2px 2px 0 var(--abnormal-thumb-shadow);
+		clip-path: polygon(12% 10%, 88% 0, 100% 58%, 70% 100%, 8% 84%, 0 34%);
+	}
+
+	.abnormal-player input[type='range']::-moz-range-thumb {
+		width: 18px;
+		height: 18px;
+		border: 0;
+		border-radius: 0;
+		background: var(--abnormal-thumb);
+		box-shadow: 2px 2px 0 var(--abnormal-thumb-shadow);
+		clip-path: polygon(12% 10%, 88% 0, 100% 58%, 70% 100%, 8% 84%, 0 34%);
 	}
 </style>
